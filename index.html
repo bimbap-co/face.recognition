@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rebuilding an academic degree FYP into an engineered, transactional edge attendance prototype.">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Face Recognition Attendance System — Sayed Arif Hakimi">
+  <meta property="og:description" content="Rebuilding an academic degree FYP into an engineered, transactional edge attendance prototype.">
+  <meta property="og:image" content="assets/images/sayed-arif-hakimi.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Face Recognition Attendance System — Sayed Arif Hakimi">
+  <meta name="twitter:description" content="Rebuilding an academic degree FYP into an engineered, transactional edge attendance prototype.">
+  <meta name="twitter:image" content="assets/images/sayed-arif-hakimi.jpg">
+  <title>Face Recognition Attendance System — Sayed Arif Hakimi</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="shell project-shell">
+  <header class="masthead">
+    <a class="brand" href="https://bimbap-co.github.io/sayed.portfolio/" aria-label="Sayed Arif Hakimi home"><span class="monogram" aria-hidden="true">S.</span><span class="brand-name">Sayed Arif Hakimi</span></a>
+    <span class="mast-note">PROJECT DELIVERY. TECHNICAL CURIOSITY.</span>
+    <a class="button" href="https://bimbap-co.github.io/sayed.portfolio/cv/Sayed-Arif-Hakimi-CV.pdf" download="Sayed-Arif-Hakimi-CV.pdf" target="_blank">DOWNLOAD CV AS PDF <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main" tabindex="-1" class="project-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="https://bimbap-co.github.io/sayed.portfolio/#portfolio">← Selected work</a><span>PROJECT 04 / 06</span></nav>
+    <header class="case-hero">
+      <p class="eyebrow">AI / ML · Degree FYP &amp; Hands-on rebuild</p>
+      <h1>Face Recognition Attendance System</h1>
+      <p class="intro">Rebuilding an academic degree FYP into an engineered, transactional edge attendance prototype.</p>
+      <div class="case-meta">
+        <p><span>Origin</span>UiTM Shah Alam Degree FYP (2023)</p>
+        <p><span>My role</span>Hands-on researcher &amp; prototype builder</p>
+        <p><span>Focus</span>Edge computer vision &amp; transactional attendance</p>
+        <p><span>Documentation</span>Supervised prototype · evaluation pending</p>
+      </div>
+      <div class="case-snapshot" role="region" aria-label="Executive snapshot">
+        <div class="snapshot-item">
+          <span class="snapshot-label">Academic Origin</span>
+          <span class="snapshot-value">UiTM Shah Alam Degree FYP (Intelligent Systems)</span>
+        </div>
+        <div class="snapshot-item">
+          <span class="snapshot-label">Pipeline Architecture</span>
+          <span class="snapshot-value">OpenCV YuNet Detection → SFace ONNX Embeddings</span>
+        </div>
+        <div class="snapshot-item">
+          <span class="snapshot-label">Engineering Focus</span>
+          <span class="snapshot-value">Open-set thresholding, SQLite ACID clocking &amp; cooldowns</span>
+        </div>
+      </div>
+    </header>
+    <section class="case-section" aria-labelledby="case-1">
+      <h2 id="case-1"><span>01</span>Problem</h2>
+      <p>A closed-set classification model can show high training accuracy yet fail in live environments. My 2023 degree Final Year Project at UiTM Shah Alam explored face recognition attendance using VGG16 and phpMyAdmin. In live testing, closed-set classification forced nearest-neighbor decisions on unknown people and lacked transactional consistency. Rebuilding this project focuses on the transition from academic experiments to a reliable edge attendance kiosk.</p>
+    </section>
+    <section class="case-section" aria-labelledby="case-2">
+      <h2 id="case-2"><span>02</span>My role</h2>
+      <p>Research the recognition pipeline and rebuild the application from the ground up: replacing naive CNN classification with open-set face embeddings (OpenCV YuNet + SFace ONNX), implementing transactional SQLite attendance clocking with duplicate cooldowns and audit trails, and building a zero-dependency admin portal.</p>
+    </section>
+    <section class="case-section" aria-labelledby="case-3">
+      <h2 id="case-3"><span>03</span>Technology</h2>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">OpenCV YuNet</span>
+        <span class="tag">SFace ONNX</span>
+        <span class="tag">Cosine Metric</span>
+        <span class="tag">SQLite Transactions</span>
+        <span class="tag">Audit Trails</span>
+        <span class="tag">Kiosk UI</span>
+      </div>
+    </section>
+    <section class="case-section" aria-labelledby="case-4">
+      <h2 id="case-4"><span>04</span>Execution</h2>
+      <ul>
+        <li>Preserve the original 2023 FYP research archive while modernizing the architecture for edge deployment.</li>
+        <li>Implement 2-stage edge vision with OpenCV YuNet for real-time face detection and SFace for 128-dimensional normalized embeddings.</li>
+        <li>Enforce open-set verification with cosine similarity thresholds and ambiguity margins to reject unknown faces instead of forcing an incorrect identity.</li>
+        <li>Implement guided 2-phase sample capture (straight, head tilts, eye movement, variable lighting) targeting 10 samples/sec up to 350 references.</li>
+        <li>Build explicit kiosk attendance clocking with duplicate cooldown prevention, transaction handling, and automated audit logging.</li>
+        <li>Develop a zero-dependency local web admin portal for attendance log review, manual fallback entries, audited corrections, and CSV export.</li>
+      </ul>
+      <ol class="flow" aria-label="Conceptual project flow">
+        <li>Webcam</li>
+        <li>YuNet Detection</li>
+        <li>SFace Embedding</li>
+        <li>Cosine Verification</li>
+        <li>Explicit Clocking</li>
+        <li>SQLite &amp; Audit</li>
+      </ol>
+      <div class="delivery-artifacts" aria-label="Key delivery artifacts">
+        <span class="artifacts-label">Key Artifacts:</span>
+        <span class="artifact-tag">Edge Vision Architecture Specs</span>
+        <span class="artifact-tag">Transactional SQLite Schema</span>
+        <span class="artifact-tag">Cosine Threshold Benchmark Matrix</span>
+        <span class="artifact-tag">Supervised Enrollment Runbook</span>
+      </div>
+      <p class="notice">Architecture note: Pretrained open-source ONNX models provide edge feature extraction without fine-tuning claims. Attendance events are transactionally committed with duplicate cooldown and audit history. This prototype operates under supervised conditions; liveness verification remains a future milestone.</p>
+    </section>
+    <section class="case-section" aria-labelledby="case-5">
+      <h2 id="case-5"><span>05</span>Result</h2>
+      <p>The rebuilt system establishes a verified local baseline: unit-tested face matching, guided enrollment, transactional SQLite event logging with idempotency, and an audited admin portal. Biometric templates remain local; no raw faces, embeddings, or attendance data are published.</p>
+      <table class="evidence-table">
+        <caption>Rebuild milestone and evidence record</caption>
+        <thead>
+          <tr>
+            <th scope="col">Component</th>
+            <th scope="col">Status &amp; Implementation Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Original FYP</th>
+            <td>UiTM Shah Alam (Feb 2023): VGG16 CNN classification over 4 people; Tkinter &amp; phpMyAdmin baseline.</td>
+          </tr>
+          <tr>
+            <th scope="row">Edge Models</th>
+            <td>OpenCV Zoo YuNet (face detection) and SFace (128-d ONNX embedding); SHA-256 verified manifest.</td>
+          </tr>
+          <tr>
+            <th scope="row">Verification Logic</th>
+            <td>Cosine distance matching with unknown rejection threshold (0.50) and ambiguity margin (0.08).</td>
+          </tr>
+          <tr>
+            <th scope="row">Attendance DB</th>
+            <td>SQLite schema with ACID transactions, event idempotency, duplicate cooldown, and audit log.</td>
+          </tr>
+          <tr>
+            <th scope="row">Admin Portal</th>
+            <td>Zero-dependency Python HTTP portal with summary statistics, audited corrections, and CSV export.</td>
+          </tr>
+          <tr>
+            <th scope="row">Automated Tests</th>
+            <td>Passing test suites for offline face matching, database transactions, and admin HTTP endpoints.</td>
+          </tr>
+          <tr>
+            <th scope="row">Liveness &amp; Pilot</th>
+            <td>Supervised prototype only; printed photo/replay spoof defense unverified; unattended pilot pending.</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="case-link" href="https://github.com/SayedArifHakimi/face-recognition-attendance-system" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a>
+    </section>
+    <section class="case-section" aria-labelledby="case-6">
+      <h2 id="case-6"><span>06</span>What I learned</h2>
+      <p>Moving from an academic deep learning experiment to an engineered system highlighted that model accuracy is only one piece of the puzzle. Real-world edge systems require handling unknown identities safely, preventing accidental duplicate triggers, and maintaining auditable data integrity.</p>
+    </section>
+    <nav class="case-pagination" aria-label="Project navigation">
+      <a href="https://bimbap-co.github.io/sayed.portfolio/#portfolio">← All projects</a>
+      <a href="https://bimbap-co.github.io/sayed.portfolio/projects/scc-hermes.html">Next: SCC Hermes →</a>
+    </nav>
+  </main>
+  <footer class="footer"><span>© 2026 Sayed Arif Hakimi</span><span>Built with intention. Always learning.</span><a href="#top">Back to top ↑</a></footer>
+</div>
+<a class="back-top" href="#top" aria-label="Back to top" hidden>↑</a>
+<dialog class="dialog" id="link-status" aria-labelledby="dialog-title" aria-describedby="dialog-message"><h2 id="dialog-title">Details coming soon.</h2><p id="dialog-message">This link will be added once verified.</p><div class="dialog-actions"><button class="button" data-close type="button">CLOSE</button><button class="button" data-print type="button" hidden>PRINT THIS PROJECT ↗</button></div></dialog>
+</body>
+</html>
